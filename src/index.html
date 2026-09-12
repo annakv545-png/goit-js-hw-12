@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,15 +8,140 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <form class="form">
+      <input
+        type="text"
+        name="search-text"
+        placeholder="Search images..."
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <span class="loader is-hidden"></span>
+    <div class="container">
+      <ul class="gallery">
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card1.png">
+      <img class="gallery-image" src="./img/card1.png" alt="Card 1" />
+    </a>
 
-    <load src="./partials/footer.html" />
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card2.png">
+      <img class="gallery-image" src="./img/card2.png" alt="Card 2" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card3.png">
+      <img class="gallery-image" src="./img/card3.png" alt="Card 3" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card4.png">
+      <img class="gallery-image" src="./img/card4.png" alt="Card 4" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card5.png">
+      <img class="gallery-image" src="./img/card5.png" alt="Card 5" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card6.png">
+      <img class="gallery-image" src="./img/card6.png" alt="Card 6" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card7.png">
+      <img class="gallery-image" src="./img/card7.png" alt="Card 7" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card8.png">
+      <img class="gallery-image" src="./img/card8.png" alt="Card 8" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card9.png">
+      <img class="gallery-image" src="./img/card9.png" alt="Card 9" />
+    </a>
+  </li>
+
+  <li class="gallery-item">
+    <a class="gallery-link" href="./img/card10.png">
+      <img class="gallery-image" src="./img/card10.png" alt="Card 9" />
+    </a>
+  </li>
+    <li class="gallery-item">
+    <a class="gallery-link" href="./img/card11.png">
+      <img class="gallery-image" src="./img/card11.png" alt="Card 9" />
+    </a>
+  </li>
+    <li class="gallery-item">
+    <a class="gallery-link" href="./img/card12.png">
+      <img class="gallery-image" src="./img/card12.png" alt="Card 9" />
+    </a>
+  </li>
+    <li class="gallery-item">
+    <a class="gallery-link" href="./img/card13.png">
+      <img class="gallery-image" src="./img/card13.png" alt="Card 9" />
+    </a>
+  </li>
+    <li class="gallery-item">
+    <a class="gallery-link" href="./img/card14.png">
+      <img class="gallery-image" src="./img/card14.png" alt="Card 9" />
+    </a>
+  </li>
+    <li class="gallery-item">
+    <a class="gallery-link" href="./img/card15.png">
+      <img class="gallery-image" src="./img/card15.png" alt="Card 9" />
+    </a>
+  </li>
+</ul>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/pixabay-api.js"></script>
+    <script type="module" src="./js/render-functions.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пошук зображень</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <form class="form">
+      <input
+        type="text"
+        name="search-text"
+        placeholder="Search images..."
+        required
+        autocomplete="off"
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="container">
+      <ul class="gallery"></ul>
+
+      <button type="button" class="load-more-btn hidden">Load more</button>
+      <span class="loader hidden">Loading images, please wait...</span>
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>
